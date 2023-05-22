@@ -26,3 +26,8 @@ export interface IBlogCardProps {
     title: string,
     body: string,
 }
+
+export interface ITagFilterProps {
+    setter: Function,
+    list: string[]
+}

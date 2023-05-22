@@ -8,7 +8,7 @@ const BlogSection = ({ title, posts }: IBlogSectionProps) => {
         <h2>{title}</h2>
         {posts && posts.map((post) => {
             return(
-            <BlogCard title={post.title} body={post.body}/>
+            <BlogCard key={post.id} title={post.title} body={post.body}/>
         )}
         )}
     </div>
