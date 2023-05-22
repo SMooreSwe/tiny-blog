@@ -23,8 +23,7 @@ export interface IBlogSectionProps {
 }
 
 export interface IBlogCardProps {
-    title: string,
-    body: string,
+    post: IPost,
 }
 
 export interface ITagFilterProps {

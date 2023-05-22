@@ -3,11 +3,10 @@ import { IGalleryProps, IPost } from '../types'
 import BlogSection from './BlogSection'
 import { mockResponse } from '../mockData/mockData'
 import TagFilter from './TagFilter'
+import { filter } from '../utils/utils'
 
 const Gallery = ({children}: IGalleryProps) => {
     const [data, setData] = useState<IPost[]>([])
-    
-    const filter : string[] = [ "crime", "magical", "mystery", "history", "love"]
     const [filterOptions, setFilterOptions] = useState<string[]>(filter)
     
     useEffect(() => {
@@ -32,7 +31,7 @@ const Gallery = ({children}: IGalleryProps) => {
 
   return (
     <div className='app__gallery'>
-        <h2>Gallery</h2>
+        <h2>Choose a Subject</h2>
         <TagFilter list={filter} setter={filterSetter}/>
         {data && filterOptions.map((filter) => {
             const array = postSorter(filter, data)

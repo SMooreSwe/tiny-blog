@@ -21,3 +21,9 @@
   border: 1px solid black;
   margin: 1rem;
 }
+
+.blogcard__tagWrapper {
+  display: flex;
+  gap: 0.5rem;
+  margin: 1rem;
+}

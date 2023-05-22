@@ -1,14 +1,15 @@
 import React from 'react'
 import { IBlogSectionProps } from '../types'
 import BlogCard from './BlogCard'
+import { capitalise } from '../utils/utils'
 
 const BlogSection = ({ title, posts }: IBlogSectionProps) => {
   return (
     <div className='gallery__blogSection'>
-        <h2>{title}</h2>
+        <h2>{capitalise(title)}</h2>
         {posts && posts.map((post) => {
             return(
-            <BlogCard key={post.id} title={post.title} body={post.body}/>
+            <BlogCard key={post.id} post={post}/>
         )}
         )}
     </div>
