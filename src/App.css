@@ -38,12 +38,17 @@
   gap: 1rem;
 }
 
+.blogcard__body {
+ text-align: left;
+}
+
 .blogcard__tagWrapper {
   align-self: end;
   justify-self: start;
   display: flex;
   gap: 0.5rem;
-  margin: 1.5rem;
+  margin: 1.75rem;
+  padding-left: 0.5rem;
   color: hsl( 0 0% 0% / 0.4);
 }
 

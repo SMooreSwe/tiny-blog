@@ -4,4 +4,9 @@ export const capitalise = (word: string) : string => {
     return first + rest
 }
 
+export const fetchData = () => {
+    return fetch('https://dummyjson.com/posts')
+        .then(response => response.json())
+}
+
 export const filter : string[] = [ "crime", "magical", "mystery", "history", "love"]

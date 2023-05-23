@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { IGalleryProps, IPost } from '../types'
 import BlogSection from './BlogSection'
-import { mockResponse } from '../mockData/mockData'
 import TagFilter from './TagFilter'
-import { filter } from '../utils/utils'
+import { filter, fetchData } from '../utils/utils'
 
 const Gallery = ({children}: IGalleryProps) => {
     const [data, setData] = useState<IPost[]>([])
@@ -11,9 +10,8 @@ const Gallery = ({children}: IGalleryProps) => {
     const [filterOptions, setFilterOptions] = useState<string[]>(filter)
     
     useEffect(() => {
-      const posts = mockResponse.posts
-      setData(posts)
-
+        fetchData()
+            .then(response => setData(response.posts))
     }, [])
   
     const postSorter = (filterTag: string, postArray : IPost[]) => {

@@ -6,7 +6,7 @@ const BlogCard = (props: IBlogCardProps) => {
   return (
     <section className='blogSection__blogcard'>
         <h3 className=''>{title}</h3>
-        <p>{body}</p>
+        <p className='blogcard__body'>{body}</p>
         <div className='blogcard__tagWrapper'>
             <div>Tags:</div>
             {tags && tags.map(tag => {
