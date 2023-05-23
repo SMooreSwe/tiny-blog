@@ -76,7 +76,7 @@
 
   .accordion__panel:has([aria-expanded="false"]) .accordion__title {
     writing-mode: vertical-rl;
-    text-orientation: upright;
+    text-orientation: mixed;
   }
 }
 
