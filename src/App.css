@@ -20,10 +20,11 @@
 .blogSection__blogcard {
   border: 1px solid black;
   margin: 1rem;
+  padding-inline: 1rem;
 }
 
 .blogcard__tagWrapper {
   display: flex;
   gap: 0.5rem;
-  margin: 1rem;
+  margin: 1.5rem;
 }

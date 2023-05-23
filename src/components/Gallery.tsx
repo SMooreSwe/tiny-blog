@@ -33,13 +33,14 @@ const Gallery = ({children}: IGalleryProps) => {
     <div className='app__gallery'>
         <h2>Choose a Subject</h2>
         <TagFilter list={filter} setter={filterSetter}/>
-        {data && filterOptions.map((filter) => {
-            const array = postSorter(filter, data)
-            return (
-                <BlogSection key={filter} title={filter} posts={array}/>
-            )
-        })}
-        
+        <div className='accordion'>
+            {data && filterOptions.map((filter) => {
+                const array = postSorter(filter, data)
+                return (
+                    <BlogSection key={filter} title={filter} posts={array}/>
+                )
+            })}
+        </div>
     </div>
   )
 }
