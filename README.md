@@ -44,3 +44,12 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+## Attribution 
+
+Icons from the Noun Project:
+[crime](https://thenounproject.com/browse/icons/term/crime/) - Crime Icon by Kawalan Icon 
+[love](https://thenounproject.com/browse/icons/term/love/) - Love by PEBIAN 
+[mystery](https://thenounproject.com/browse/icons/term/mystery/) - Mystery by Kawalan Icon 
+[magical](https://thenounproject.com/browse/icons/term/magical-hat/) - Magical Hat by Moch Rizki Eko Waluyo 
+[history](https://thenounproject.com/browse/icons/term/history/) - History by myiconfinder 

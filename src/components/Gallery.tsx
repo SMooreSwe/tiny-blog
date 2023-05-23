@@ -7,6 +7,7 @@ import { filter } from '../utils/utils'
 
 const Gallery = ({children}: IGalleryProps) => {
     const [data, setData] = useState<IPost[]>([])
+    const [isExpanded, setIsExpanded ] = useState<number>(0)
     const [filterOptions, setFilterOptions] = useState<string[]>(filter)
     
     useEffect(() => {
@@ -29,15 +30,19 @@ const Gallery = ({children}: IGalleryProps) => {
         setFilterOptions(value.split(','))
     }
 
+    const expandedSetter = (indexNumber: number) => {
+        setIsExpanded(indexNumber)
+    }
+
   return (
     <div className='app__gallery'>
         <h2>Choose a Subject</h2>
         <TagFilter list={filter} setter={filterSetter}/>
         <div className='accordion'>
-            {data && filterOptions.map((filter) => {
+            {data && filterOptions.map((filter, index) => {
                 const array = postSorter(filter, data)
                 return (
-                    <BlogSection key={filter} title={filter} posts={array}/>
+                    <BlogSection key={filter} title={filter} posts={array} expandedSetter={expandedSetter} isExpanded={isExpanded} index={index}/>
                 )
             })}
         </div>

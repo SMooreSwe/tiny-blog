@@ -19,6 +19,9 @@ export interface IGalleryProps {
 
 export interface IBlogSectionProps {
     title: string,
+    isExpanded: number,
+    expandedSetter: Function,
+    index: number,
     posts: IPost[]
 }
 
