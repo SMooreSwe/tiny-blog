@@ -6,7 +6,7 @@ const TagFilter = ({list, setter}: ITagFilterProps) => {
     const filterChoice = useRef<HTMLSelectElement | null>(null)
     
   return (
-    <select ref={filterChoice} onChange={() => setter(filterChoice.current!.value)}>
+    <select ref={filterChoice} onChange={() => setter(filterChoice.current!.value)} className='tagFilter'>
         <option value={list}>All</option>
         {list && list.map((filterOption) =>{
             return(

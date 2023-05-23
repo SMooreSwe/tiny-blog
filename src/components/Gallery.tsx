@@ -28,6 +28,7 @@ const Gallery = ({children}: IGalleryProps) => {
 
     const filterSetter = (value : string) => {
         setFilterOptions(value.split(','))
+        setIsExpanded(0);
     }
 
     const expandedSetter = (indexNumber: number) => {
