@@ -15,10 +15,9 @@
   border: 1px solid black;
   border-radius: 2.5rem;
   max-width: 90%;
-  max-height: 90%;
   margin: 2rem;
   margin-inline: auto;
-  padding: 1rem;
+  padding: 0.75rem;
 }
 
 .gallery__blogSection {
@@ -60,7 +59,7 @@
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  padding-block: 2rem;
+  padding: 2rem 1rem;
   contain: content;
 }
 
@@ -68,6 +67,16 @@
   .accordion {
     flex-direction: row;
     height: 30rem;
+    padding: 1rem 0rem;
+  }
+
+  .accordion__panel:has([aria-expanded="false"]) .accordion__trigger {
+    flex-direction: column-reverse;
+  }
+
+  .accordion__panel:has([aria-expanded="false"]) .accordion__title {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
   }
 }
 
@@ -87,6 +96,7 @@
   margin-block-end: 1rem;
 }
 
+
 .accordion__icon {
   background-color: var(--_panel-color);
   width: var(--_button-size);
@@ -103,6 +113,8 @@
   display: grid;
   align-items: center;
 } 
+
+
 
 @media (width < 785px) {
   .accordion__title::after {
@@ -153,6 +165,12 @@
   display: grid;
   gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+}
+
+@media (width < 430px) {
+  .accordion__content {
+    margin-left: -0.4rem;
+  }
 }
 
 .accordion__panel:has([aria-expanded="true"]) .accordion__content {
