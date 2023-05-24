@@ -1,5 +1,3 @@
-import { ReactNode } from "react"
-
 export interface IPost {
     id: number,
     title: string,
@@ -11,10 +9,6 @@ export interface IPost {
 
 export interface IAPIResponse {
     posts: IPost[]
-}
-
-export interface IGalleryProps {
-    children?: ReactNode
 }
 
 export interface IBlogSectionProps {
@@ -30,6 +24,5 @@ export interface IBlogCardProps {
 }
 
 export interface ITagFilterProps {
-    setter: Function,
-    list: string[]
+    filterSetter: Function,
 }

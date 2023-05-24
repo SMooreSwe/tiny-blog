@@ -1,19 +1,22 @@
 import React, { useRef } from 'react'
 import { ITagFilterProps } from '../types'
-import { capitalise } from '../utils/utils'
+import { capitalise, filter } from '../utils/utils'
 
-const TagFilter = ({list, setter}: ITagFilterProps) => {
+const TagFilter = ({ filterSetter }: ITagFilterProps) => {
     const filterChoice = useRef<HTMLSelectElement | null>(null)
     
   return (
-    <select ref={filterChoice} onChange={() => setter(filterChoice.current!.value)} className='tagFilter'>
-        <option value={list}>All</option>
-        {list && list.map((filterOption) =>{
-            return(
-            <option key={filterOption} value={filterOption}>{capitalise(filterOption)}</option>
-            )
-        })}
-    </select>
+    <div className='tagFilter'>
+      <h3 className='tagFilter__heading'>Choose a Subject:</h3>
+      <select ref={filterChoice} onChange={() => filterSetter(filterChoice.current!.value)} className='tagFilter__dropdown'>
+          <option value={filter}>All</option>
+          {filter && filter.map((filterOption) =>{
+              return(
+              <option key={filterOption} value={filterOption}>{capitalise(filterOption)}</option>
+              )
+          })}
+      </select>
+    </div>
   )
 }
 

@@ -1,21 +1,31 @@
 .App {
   text-align: center;
-  height: 90vh;
   display: flex;
   flex-direction: column;
   gap: 0;
+  color: #235a5a;
+  position: relative;
+  min-height: 100vh;
 }
 
 .app__header {
-  margin-block: auto;
-  margin-top: 3rem;
+  width: 100%;
+  height: 5rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #f5383d;
+  box-shadow: 0px 5px 5px hsl( 0 0% 0% / 0.4);
+}
+
+.header__title {
+  margin-left: 4.5rem;
+  width: fit-content;
 }
 
 .app__gallery{
-  border: 1px solid black;
-  border-radius: 2.5rem;
   max-width: 95%;
-  margin: 2rem;
+  margin-top: 5rem;
   margin-inline: auto;
   padding: 0.75rem;
 }
@@ -26,7 +36,16 @@
 }
 
 .tagFilter {
- margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  height: 2rem;
+  margin: 1rem 2rem 0.75rem;
+}
+
+.tagFilter__dropdown {
+ margin-top: 0.3rem;
+ padding-inline: 0.5rem;
 }
 
 .blogSection__blogcard {
@@ -48,11 +67,22 @@
   gap: 0.5rem;
   margin: 1.75rem;
   padding-left: 0.5rem;
-  color: hsl( 0 0% 0% / 0.4);
+  color: #f5383d;
+}
+
+.app__footer {
+  position: absolute;
+  width: 100%;
+  height: 3rem;
+  bottom: 0;
+  background-color: #f5383d;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 .accordion {
-  --_panel-color:hsl( 220 70% 50% / 0.5);
+  --_panel-color:#f5383d;
   --_button-size: 3rem;
   --_panel-padding: 1rem;
   --_panel-gap: 1rem;
@@ -61,23 +91,8 @@
   gap: 1rem;
   padding: 2rem 1rem;
   contain: content;
-}
-
-@media (width > 785px) {
-  .accordion {
-    flex-direction: row;
-    height: 30rem;
-    padding: 1rem 0.5rem;
-  }
-
-  .accordion__panel:has([aria-expanded="false"]) .accordion__trigger {
-    flex-direction: column-reverse;
-  }
-
-  .accordion__panel:has([aria-expanded="false"]) .accordion__title {
-    writing-mode: vertical-rl;
-    text-orientation: mixed;
-  }
+  margin-top: 1rem;
+  min-height:90%;
 }
 
 .accordion * {
@@ -114,8 +129,6 @@
   align-items: center;
 } 
 
-
-
 @media (width < 785px) {
   .accordion__title::after {
     content: '';
@@ -130,34 +143,48 @@
   }
 }
 
-  /* Firefox */
-  .accordion__panel {
-    scrollbar-width: 0px;
-    scrollbar-color: transparent transparent;
-  }
-
-  /* Chrome, Edge, and Safari */
-  .accordion__panel::-webkit-scrollbar {
-    display: none;
-  }
-
 .accordion__panel {
+  scrollbar-width: 0px;
+  scrollbar-color: transparent transparent;
   flex-basis: var(--_button-size);
-  overflow-x: hidden; 
+  overflow: hidden; 
   padding: var(--_panel-padding);
   border-radius: calc(((var(--_panel-padding) * 2) + var(--_button-size)) / 2);
   transition: flex-basis 500ms, flex-grow 500ms;
 }
 
+.accordion__panel::-webkit-scrollbar {
+  display: none;
+}
+
 .accordion__panel:has([aria-expanded="true"]) {
   flex-basis: clamp(15rem, 40vh, 20rem);
+  overflow-y: scroll;
   flex-grow: 1;
 }
 
 .accordion__panel:focus-within {
   outline: 2px solid var(--_panel-color);
-  outline-offset: 3px;
+  outline-offset: 2px;
 }
+
+@media (width > 785px) {
+  .accordion {
+    flex-direction: row;
+    height: 30rem;
+    padding: 1rem 0.5rem;
+  }
+
+  .accordion__panel:has([aria-expanded="false"]) .accordion__trigger {
+    flex-direction: column-reverse;
+  }
+
+  .accordion__panel:has([aria-expanded="false"]) .accordion__title {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+  }
+}
+
 .accordion__content {
   margin-left: var(--_panel-padding);
   transform: translateY(2rem);
@@ -167,14 +194,14 @@
   grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
 }
 
-@media (width < 430px) {
-  .accordion__content {
-    margin-left: -0.4rem;
-  }
-}
-
 .accordion__panel:has([aria-expanded="true"]) .accordion__content {
   transform: translateY(0);
   opacity: 1;
   transition: transform 500ms 500ms, opacity 500ms 500ms;
+}
+
+@media (width < 430px) {
+  .accordion__content {
+    margin-left: -0.4rem;
+  }
 }
