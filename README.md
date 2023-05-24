@@ -39,8 +39,8 @@ The data used for each "blog entry" comes from the DummyJSON API.
 ## Attribution 
 
 Icons used for each topic come from the Noun Project:
-[crime](https://thenounproject.com/browse/icons/term/crime/) - Crime Icon by Kawalan Icon 
-[love](https://thenounproject.com/browse/icons/term/love/) - Love by PEBIAN 
-[mystery](https://thenounproject.com/browse/icons/term/mystery/) - Mystery by Kawalan Icon 
-[magical](https://thenounproject.com/browse/icons/term/magical-hat/) - Magical Hat by Moch Rizki Eko Waluyo 
-[history](https://thenounproject.com/browse/icons/term/history/) - History by myiconfinder 
+- [crime](https://thenounproject.com/browse/icons/term/crime/) - Crime Icon by Kawalan Icon 
+- [love](https://thenounproject.com/browse/icons/term/love/) - Love by PEBIAN 
+- [mystery](https://thenounproject.com/browse/icons/term/mystery/) - Mystery by Kawalan Icon 
+- [magical](https://thenounproject.com/browse/icons/term/magical-hat/) - Magical Hat by Moch Rizki Eko Waluyo 
+- [history](https://thenounproject.com/browse/icons/term/history/) - History by myiconfinder 
