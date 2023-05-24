@@ -3,7 +3,7 @@ import { ITagFilterProps } from '../types'
 import { capitalise, filter } from '../utils/utils'
 
 const TagFilter = ({ filterSetter }: ITagFilterProps) => {
-    const filterChoice = useRef<HTMLSelectElement | null>(null)
+  const filterChoice = useRef<HTMLSelectElement | null>(null)
     
   return (
     <div className='tagFilter'>

@@ -10,7 +10,6 @@ const BlogSection = ({ title, posts, index, expandedSetter, isExpanded }: IBlogS
     if(isExpanded !== index) {
       panel.current!.scrollTo({
         top: 0,
-        left: 0,
         behavior: "smooth",
       })
     }
