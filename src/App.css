@@ -18,7 +18,7 @@
   height: 5rem;
   position: absolute;
   top: 0; left: 0;
-  background-color: #f5383d;
+  background-color: var(--_panel-color);
   box-shadow: 0px 5px 5px hsl( 0 0% 0% / 0.4);
 }
 
