@@ -2,6 +2,8 @@
 
 This project was built to work on my TypeScript skills, as well as continue practice of React functionality.  I utilised CSS and attribute selectors to target state changes in the displayed topics, to allow for the accordion effect.
 
+Find it deployed: [here](https://tiny-blog-sigma.vercel.app/)
+
 ## UI
 
 The UI passes data from the JSON received and sorts the posts into 5 categories based upon their "tags". These categories are stored in the Utils file, as the constant "filter" - changes to this will change the filtered subjects shown (though a new icon willl be needed for the new subject).
