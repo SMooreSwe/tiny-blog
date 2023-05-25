@@ -35,7 +35,7 @@ const BlogSection = ({ title, posts, index, expandedSetter, isExpanded }: IBlogS
             <img src={require(`../../public/${title}.svg`)} alt={`${title} icon`} className='accordion__icon' aria-hidden={true}/>
           </button>
         </h2>
-        <div className='accordion__content' role='region' aria-labelledby='panelHeading' aria-hidden={index === 0 ? false : true}>
+        <div className='accordion__content' role='region' aria-labelledby='panelHeading' aria-hidden={!expandedChecker()}>
           {posts && posts.map((post) => {
               return(
               <BlogCard key={post.id} post={post}/>
